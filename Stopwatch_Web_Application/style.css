@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: radial-gradient(circle at top, #1b2735, #090a0f);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+/* GLASS CARD */
+.container {
+  width: 360px;
+  padding: 35px;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 0 40px rgba(0, 255, 255, 0.15);
+  text-align: center;
+}
+
+/* TITLE */
+.title {
+  letter-spacing: 3px;
+  font-size: 14px;
+  opacity: 0.7;
+  margin-bottom: 15px;
+}
+
+/* TIMER */
+.timer {
+  font-size: 52px;
+  font-weight: 600;
+  margin: 25px 0;
+  text-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
+  transition: all 0.3s ease;
+}
+
+/* BUTTONS */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  padding: 12px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  color: white;
+}
+
+/* BUTTON COLORS */
+.start { background: linear-gradient(135deg, #00c853, #64dd17); }
+.pause { background: linear-gradient(135deg, #ff9100, #ff6d00); }
+.reset { background: linear-gradient(135deg, #ff1744, #d50000); }
+.lap   { background: linear-gradient(135deg, #2979ff, #00b0ff); }
+
+/* HOVER */
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* LAPS */
+.laps-container {
+  max-height: 140px;
+  overflow-y: auto;
+}
+
+#laps li {
+  list-style: none;
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.12);
+  font-size: 14px;
+  animation: slideIn 0.3s ease;
+}
+
+/* LAP ANIMATION */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+ 
